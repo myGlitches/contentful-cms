@@ -2,35 +2,44 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
+
+```bash
+npm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## First View
 
-## Learn More
+![image](https://github.com/user-attachments/assets/70672dbf-5913-4cc3-ab24-5532575863ef)
 
-To learn more about Next.js, take a look at the following resources:
+This is the page which will greet you, it is fully responsive and has a dark mode and light mode switch as well.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![image](https://github.com/user-attachments/assets/b601424c-5627-454a-a4f5-d042663ec3b8)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Using Contentful CMS
 
-## Deploy on Vercel
+I used Contentful for the CMS integration, and added a page called 'Features' which can be navigated by click on 'See More' at the end of the home page
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![image](https://github.com/user-attachments/assets/e3117a74-2623-4de1-862f-e5572fd085a3)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Which brings us to a list of Features which are being fetched from Contentful
+
+![image](https://github.com/user-attachments/assets/efb3c652-c31a-4479-a280-29e1c61b6765)
+
+Each of these Features can be viewed in a single page with more detail when clicked on it (WIP)
+
+
+![image](https://github.com/user-attachments/assets/930b34a4-72ab-4efd-b41e-a4509e7f4e27)
+
+
+
