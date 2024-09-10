@@ -2,7 +2,14 @@ import React from "react";
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-function FeatureCard({ post }: { post: any }) {
+export interface IPost {
+  fields: {
+    title: string;
+    slug: string;
+  };
+}
+
+function FeatureCard({ post }: { post: IPost }) {
   const { slug, title } = post?.fields;
 
   console.log("Post data:", post);

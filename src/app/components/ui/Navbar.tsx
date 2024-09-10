@@ -1,21 +1,20 @@
 "use client";
 
-import Image from "next/image";
-import React, { useState } from "react";
-import "../../../styles/navbar.css";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
-  SheetClose,
   SheetContent,
   SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import Link from "next/link";
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import "../../../styles/navbar.css";
 
 import {
   DropdownMenu,

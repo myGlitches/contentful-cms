@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const contentful = require("contentful");
 
 export const client = contentful.createClient({

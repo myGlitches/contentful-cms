@@ -1,14 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MagicWandIcon } from "@radix-ui/react-icons";
-import {
-  BarChart,
-  BellRingIcon,
-  Boxes,
-  CircleSlash2,
-  Computer,
-  Cpu,
-  GitGraphIcon,
-} from "lucide-react";
+import { BarChart, Boxes, CircleSlash2, Computer, Cpu } from "lucide-react";
 import Image from "next/image";
 
 function FeatureCards() {

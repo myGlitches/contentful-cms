@@ -59,7 +59,7 @@ export default function Home() {
         </div>
 
         {/* Companies Gallery */}
-        <p>Helping individuals and teams at the world's best companies</p>
+        <p>Helping individuals and teams at the world&apos;s best companies</p>
         <section className="px-20 hidden md:block">
           <CompanyGallery />
         </section>
