@@ -13,7 +13,6 @@ import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import "../../../styles/navbar.css";
 
 import {
@@ -24,11 +23,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const { setTheme } = useTheme();
-
-  const openSheet = () => setIsOpen(true);
-  const closeSheet = () => setIsOpen(false);
 
   return (
     <nav className="w-full flex justify-between border-b px-3 sm:px-24 py-4 gap-3">
@@ -38,11 +33,8 @@ const Navbar = () => {
             <Image alt="Pype AI" src="/PypeAILogo.png" width={80} height={80} />
           </Link>
 
-          <Sheet open={isOpen}>
-            <SheetTrigger
-              onClick={openSheet}
-              className="company-name companylogo-gray lg:pointer-events-none text-2xl flex justify-center items-center hover:cursor-pointer"
-            >
+          <Sheet>
+            <SheetTrigger className="company-name companylogo-gray lg:pointer-events-none text-2xl flex justify-center items-center hover:cursor-pointer">
               Pype AI
             </SheetTrigger>
 
@@ -51,20 +43,12 @@ const Navbar = () => {
                 <SheetTitle>Options</SheetTitle>
                 <SheetDescription className="w-full">
                   <Link href="#features">
-                    <Button
-                      variant="ghost"
-                      className="w-full"
-                      onClick={closeSheet}
-                    >
+                    <Button variant="ghost" className="w-full">
                       Features
                     </Button>
                   </Link>
                   <Link target="_blank" href="https://app.pypeai.com/">
-                    <Button
-                      variant="ghost"
-                      className="w-full"
-                      onClick={closeSheet}
-                    >
+                    <Button variant="ghost" className="w-full">
                       Launch App
                     </Button>
                   </Link>
@@ -76,7 +60,7 @@ const Navbar = () => {
 
         <div className="hidden gap-5 justify-center items-center lg:flex ">
           <Link href="#features">
-            <Button variant="ghost" className="w-full" onClick={closeSheet}>
+            <Button variant="ghost" className="w-full">
               Features
             </Button>
           </Link>
