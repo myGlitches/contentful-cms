@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <>
       <div className="flex flex-col px-5 justify-center items-center">
-        <div className="flex flex-col justify-center items-center px-5 sm:px-36 pt-20">
+        <div className="flex flex-col justify-center items-center px-5 sm:px-36 pt-20 md:max-w-[60%]">
           <h1 className="scroll-m-20 text-4xl flex justify-center items-center text-center font-bold lg:text-6xl">
             Build, Evaluate and Improve Prompts 10x faster
           </h1>
