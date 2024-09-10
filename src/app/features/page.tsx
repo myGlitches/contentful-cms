@@ -14,7 +14,7 @@ export default async function Features() {
   return (
     <section>
       {!isEmpty(posts) ? (
-        <div className="px-20 flex flex-col gap-5 my-10">
+        <div className="px-2 md:px-20 flex flex-col gap-5 my-10">
           {posts?.map((post: IPost) => (
             <FeatureCard key={post?.fields?.slug} post={post} />
           ))}
