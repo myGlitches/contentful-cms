@@ -19,7 +19,7 @@ export default function RootLayout({
         {/* TODO: dark and light theme in progress */}
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
