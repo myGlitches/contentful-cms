@@ -1,0 +1,116 @@
+"use client";
+
+import { Button } from "@/components/ui/button";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+import { Moon, Sun } from "lucide-react";
+import { useTheme } from "next-themes";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import "../../../styles/navbar.css";
+
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const { setTheme } = useTheme();
+
+  const openSheet = () => setIsOpen(true);
+  const closeSheet = () => setIsOpen(false);
+
+  return (
+    <nav className="w-full flex justify-between border-b px-3 sm:px-24 py-4 gap-3">
+      <>
+        <div className="flex justify-between w-full gap-5 lg:justify-normal">
+          <Link href="/">
+            <Image alt="Pype AI" src="/PypeAILogo.png" width={80} height={80} />
+          </Link>
+
+          <Sheet open={isOpen}>
+            <SheetTrigger
+              onClick={openSheet}
+              className="company-name companylogo-gray lg:pointer-events-none text-2xl flex justify-center items-center hover:cursor-pointer"
+            >
+              Pype AI
+            </SheetTrigger>
+
+            <SheetContent side="top" className="bg-white">
+              <SheetHeader>
+                <SheetTitle>Options</SheetTitle>
+                <SheetDescription className="w-full">
+                  <Link href="#features">
+                    <Button
+                      variant="ghost"
+                      className="w-full"
+                      onClick={closeSheet}
+                    >
+                      Features
+                    </Button>
+                  </Link>
+                  <Link target="_blank" href="https://app.pypeai.com/">
+                    <Button
+                      variant="ghost"
+                      className="w-full"
+                      onClick={closeSheet}
+                    >
+                      Launch App
+                    </Button>
+                  </Link>
+                </SheetDescription>
+              </SheetHeader>
+            </SheetContent>
+          </Sheet>
+        </div>
+
+        <div className="hidden gap-5 justify-center items-center lg:flex ">
+          <Link href="#features">
+            <Button variant="ghost" className="w-full" onClick={closeSheet}>
+              Features
+            </Button>
+          </Link>
+          <Link target="_blank" href="https://app.pypeai.com/">
+            <Button variant="default">Launch App</Button>
+          </Link>
+        </div>
+      </>
+
+      {/* Dark Light Theme */}
+      <div className="flex justify-center items-center">
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <Button variant="outline" size="icon">
+              <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+              <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+              <span className="sr-only">Toggle theme</span>
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end">
+            <DropdownMenuItem onClick={() => setTheme("light")}>
+              Light
+            </DropdownMenuItem>
+            <DropdownMenuItem onClick={() => setTheme("dark")}>
+              Dark
+            </DropdownMenuItem>
+            <DropdownMenuItem onClick={() => setTheme("system")}>
+              System
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
