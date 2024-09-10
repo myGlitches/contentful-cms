@@ -1,8 +1,12 @@
-// src/app/layout.tsx
 import "../styles/globals.css";
 import Footer from "./components/ui/Footer";
 import Navbar from "./components/ui/Navbar";
 import { ThemeProvider } from "@/app/components/ThemeProvider";
+
+export const metadata = {
+  title: "Pype AI",
+  description: "Pype AI",
+};
 
 export default function RootLayout({
   children,
