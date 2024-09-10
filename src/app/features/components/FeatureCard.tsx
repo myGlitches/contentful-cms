@@ -49,7 +49,13 @@ function FeatureCard({ post }: { post: IPost }) {
           </CardHeader>
           {imageSrc && width > 0 && height > 0 && (
             <div className="p-5 flex justify-center items-center">
-              <Image alt={slug} src={imageSrc} width={width} height={height} />
+              <Image
+                alt={slug}
+                src={imageSrc}
+                width={width}
+                height={height}
+                className="max-w-full max-h-96" //TODO: fix big images
+              />
             </div>
           )}
           <CardContent>
