@@ -32,7 +32,7 @@ export default function Home() {
         {/* Embedded Video */}
         <div className="flex justify-center w-full" data-aos="fade-up">
           <EmbedVideo
-            link="https://www.youtube.com/embed/-y_KrosGWaU"
+            link="https://www.youtube.com/watch?v=t0Q2otsqC4I"
             title="Pype AI"
             className="rounded-xl my-10 w-[80%] md:w-[60%] h-[250px] md:h-[450px]"
             data-aos="fade-up"
