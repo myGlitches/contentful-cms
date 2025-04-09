@@ -24,7 +24,7 @@ export default function Home() {
           </h1>
           <p className="pt-10">
             Empower your team to build, evaluate, and deploy high-performing
-            prompts for LLM-based applications. Pype streamlines collaboration,
+            prompts for LLM-based applications. Surya AI streamlines collaboration,
             version control, and performance analysis, helping you deliver
             reliable AI solutions faster.
           </p>
