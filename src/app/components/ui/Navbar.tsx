@@ -35,7 +35,7 @@ const Navbar = () => {
 
           <Sheet>
             <SheetTrigger className="company-name companylogo-gray lg:pointer-events-none text-2xl flex justify-center items-center hover:cursor-pointer">
-              Pype AI
+              Surya AI
             </SheetTrigger>
 
             <SheetContent side="top" className="bg-white">
